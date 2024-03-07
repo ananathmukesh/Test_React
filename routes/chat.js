@@ -11,7 +11,10 @@ const {
     TimeLine,
     cheackChatMaster,
     editMsg,
-    uploadAudio
+    uploadAudio,
+    downloadStatus,
+    receiverImg,
+    addGroup
  } = require('../controllers/chatController');
 
 
@@ -108,6 +111,9 @@ const upload = multer({ storage: storage });
  router.post('/TimeLine',TimeLine);
  router.post('/StarChat',cheackChatMaster);
  router.post('/editConversation',editMsg);
+ router.post('/upl_download_status',downloadStatus);
  router.post('/mp3',uploads.single('audio'),uploadAudio);
+ router.post('/getreceiverImg',receiverImg);
+ router.post('/addgroup',addGroup);
 
 module.exports = router;

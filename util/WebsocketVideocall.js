@@ -15,7 +15,7 @@ const io = socketIO(server, {
 app.use(cors());
 
 app.get("/", (req, res) => {
-  res.send("server is running asd");
+  res.send("server is running");
 });
 
 io.on("connection", (socket) => {

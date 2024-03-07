@@ -7,7 +7,8 @@ const {
     logout,
     Profileimage,
     getusers,
-    getMessages
+    getMessages,
+    getGroupList
  } = require('../controllers/authController');
 const path = require('path');
 const multer = require('multer');
@@ -32,5 +33,6 @@ router.post('/signin',signin);
 router.get('/logout',logout);
 router.post('/chatlist',getusers);
 router.post('/messages',getMessages);
+router.post('/grouplist',getGroupList);
 
 module.exports = router;
